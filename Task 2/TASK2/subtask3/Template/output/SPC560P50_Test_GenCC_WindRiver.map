@@ -1,0 +1,323 @@
+Wind River DLD V5.7.0.0		Mon May 02 09:22:28 2016
+
+Command line:
+dld -tPPC5534VEN:simple .\src\default560P.dld -m6 -lc -limpl
+C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\romcopy.o
+C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\bam_init.o
+C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\crt0.o
+C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\main.o
+C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\siu.o
+C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\me.o
+C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\pit.o
+C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\adc.o
+C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\interrupt.o
+C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\init.o
+C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\can.o -o
+C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\SPC560P50_Test_GenCC_WindRiver.elf
+
+Output file name   : C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\SPC560P50_Test_GenCC_WindRiver.elf
+Output file format : ELF
+Target machine type: PPC
+
+		Link Editor Memory Map
+
+
+output		input		virtual
+section		section		address		size	 file
+
+.abs.00000040   		00000040	0000032c
+		.abs.00000040   00000040	0000032c C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\main.o
+			Ext_Isr 00000040	0000032c
+
+
+.rcw            		00000000	00000008
+		.rcw            00000000	00000008 C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\bam_init.o
+		ResetConfigWord 00000000	00000004
+			 _reset 00000004	00000004
+
+
+.init           		00000020	00000000
+
+.init_vle       		00000020	00000000
+
+.exec_vect      		00001000	00000000
+
+.exec_vect_Vle  		00001000	00000000
+
+.text           		00002000	00000000
+
+.text_vle       		00002000	00000ac6
+		.text_vle       00002000	000000a2 C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\romcopy.o
+			romcopy 00002000	000000a2
+
+		.text_vle       000020a2	00000000 C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\bam_init.o
+
+		.text_vle       000020a4	00000058 C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\crt0.o
+			 _start 000020a8	00000000
+			   loop 000020b8	00000000
+
+		.text_vle       000020fc	00000136 C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\main.o
+			   main 000020fc	00000034
+		    PITCHANNEL0 00002130	000000da
+		    PITCHANNEL1 0000220c	00000026
+
+		.text_vle       00002234	00000146 C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\siu.o
+		       SIU_Init 00002234	00000146
+
+		.text_vle       0000237c	0000009e C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\me.o
+			 MEInit 0000237c	0000009e
+
+		.text_vle       0000241c	00000130 C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\pit.o
+	     PIT_ConfigureTimer 0000241c	00000030
+		 PIT_StartTimer 0000244c	0000002e
+		  PIT_StopTimer 0000247c	0000002e
+		PIT_ChannelInit 000024ac	00000066
+		       PIT_Init 00002514	00000038
+
+		.text_vle       0000254c	000000c0 C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\adc.o
+	    ADC_StartConversion 0000254c	0000002e
+			ADCInit 0000257c	00000090
+
+		.text_vle       0000260c	000000e2 C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\interrupt.o
+		  InterruptInit 0000260c	000000e2
+
+		.text_vle       000026f0	0000006a C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\init.o
+			   Init 000026f0	0000006a
+
+		.text_vle       0000275c	0000036a C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\can.o
+		  CANMsgBufInit 0000275c	000000ac
+			CANInit 00002808	000002be
+
+
+.rodata         		00002ac6	00000000
+
+.ctors          		00002ac8	00000000
+
+.dtors          		00002ac8	00000000
+
+.sdata2         		00002ac8	00000000
+
+.sbss2          		00002ac8	00000000
+
+.vects          		00012000	00000000
+
+.data           		00002ac8	00000000
+
+.sdata          		00002ac8	0000000c
+		.sdata          40000000	0000000c C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\main.o
+			  speed 40000000	00000004
+			     up 40000004	00000004
+		     deltaSpeed 40000008	00000004
+
+
+.sbss           		4000000c	00000000
+
+.bss            		4000000c	00000000
+
+.tibss          		4000000c	00000000
+
+.tidata         		4000000c	00000000
+
+.PPC.EMB.apuinfo		00000000	00000018
+		.PPC.EMB.apuinfo 00000000	00000018 C:\WINDRI~1\diab\570~1.0\PPCVLEE\simple\libc.a
+
+
+.debug_frame    		00000000	000003d4
+		.debug_frame    00000000	00000034 C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\romcopy.o
+		    __local_cie 00000000	00000000
+
+		.debug_frame    00000034	00000014 C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\bam_init.o
+		    __local_cie 00000034	00000000
+
+		.debug_frame    00000048	000000d4 C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\main.o
+		    __local_cie 00000048	00000000
+
+		.debug_frame    0000011c	00000054 C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\siu.o
+		    __local_cie 0000011c	00000000
+
+		.debug_frame    00000170	00000044 C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\me.o
+		    __local_cie 00000170	00000000
+
+		.debug_frame    000001b4	000000a8 C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\pit.o
+		    __local_cie 000001b4	00000000
+
+		.debug_frame    0000025c	00000068 C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\adc.o
+		    __local_cie 0000025c	00000000
+
+		.debug_frame    000002c4	00000050 C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\interrupt.o
+		    __local_cie 000002c4	00000000
+
+		.debug_frame    00000314	00000038 C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\init.o
+		    __local_cie 00000314	00000000
+
+		.debug_frame    0000034c	00000088 C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\can.o
+		    __local_cie 0000034c	00000000
+
+
+.debug_line     		00000000	000007c5
+		.debug_line     00000000	000000ad C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\romcopy.o
+
+		.debug_line     000000ad	00000079 C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\bam_init.o
+
+		.debug_line     00000126	00000090 C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\crt0.o
+
+		.debug_line     000001b6	000000be C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\main.o
+
+		.debug_line     00000274	000000b1 C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\main.o
+
+		.debug_line     00000325	000000a4 C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\siu.o
+
+		.debug_line     000003c9	00000095 C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\me.o
+
+		.debug_line     0000045e	000000bf C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\pit.o
+
+		.debug_line     0000051d	0000009c C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\adc.o
+
+		.debug_line     000005b9	00000097 C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\interrupt.o
+
+		.debug_line     00000650	00000097 C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\init.o
+
+		.debug_line     000006e7	000000de C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\can.o
+
+
+.debug_abbrev   		00000000	0000025d
+		.debug_abbrev   00000000	0000006d C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\romcopy.o
+
+		.debug_abbrev   0000006d	00000039 C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\bam_init.o
+
+		.debug_abbrev   000000a6	0000005a C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\main.o
+
+		.debug_abbrev   00000100	0000002b C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\siu.o
+
+		.debug_abbrev   0000012b	0000002b C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\me.o
+
+		.debug_abbrev   00000156	00000045 C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\pit.o
+
+		.debug_abbrev   0000019b	00000029 C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\adc.o
+
+		.debug_abbrev   000001c4	00000029 C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\interrupt.o
+
+		.debug_abbrev   000001ed	0000002b C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\init.o
+
+		.debug_abbrev   00000218	00000045 C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\can.o
+
+
+.debug_info     		00000000	00000cd5
+		.debug_info     00000000	0000022b C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\romcopy.o
+
+		.debug_info     0000022b	0000010e C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\bam_init.o
+
+		.debug_info     00000339	00000160 C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\main.o
+
+		.debug_info     00000499	000000d4 C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\main.o
+
+		.debug_info     0000056d	000000d5 C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\siu.o
+
+		.debug_info     00000642	000000d2 C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\me.o
+
+		.debug_info     00000714	000001ff C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\pit.o
+
+		.debug_info     00000913	000000fb C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\adc.o
+
+		.debug_info     00000a0e	000000df C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\interrupt.o
+
+		.debug_info     00000aed	000000d2 C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\init.o
+
+		.debug_info     00000bbf	00000116 C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\can.o
+
+
+Link editor command file symbols
+                         __argv 00002000
+                          __env 00002000
+                     __DATA_ROM 00002ac8
+                     __DATA_RAM 40000000
+                     __DATA_END 4000000c
+                    __BSS_START 4000000c
+                      __BSS_END 4000000c
+                   __HEAP_START 4000000c
+                      __SP_INIT 4000a000
+                       __SP_END 40009800
+                     __HEAP_END 40009800
+                  ___HEAP_START 4000000c
+                    ___HEAP_END 40009800
+                     ___SP_INIT 4000a000
+                      ___SP_END 40009800
+                    ___DATA_ROM 00002ac8
+                    ___DATA_RAM 40000000
+                    ___DATA_END 4000000c
+                   ___BSS_START 4000000c
+                     ___BSS_END 4000000c
+                     _SDA_BASE_ 40007ff0
+                    _SDA2_BASE_ 0000aab8
+
+                                Cross Reference Table
+
+Symbol                          Output          Input           Referenced
+                                Section         Section         (* - Defined)
+
+ADCInit                         .text_vle	.text_vle	  C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\init.o
+                                                                * C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\adc.o
+ADC_StartConversion             .text_vle	.text_vle	* C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\adc.o
+CANInit                         .text_vle	.text_vle	* C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\can.o
+                                                                  C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\init.o
+CANMsgBufInit                   .text_vle	.text_vle	* C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\can.o
+Ext_Isr                         .abs.00000040	.abs.00000040	* C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\main.o
+Init                            .text_vle	.text_vle	* C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\init.o
+                                                                  C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\main.o
+InterruptInit                   .text_vle	.text_vle	  C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\init.o
+                                                                * C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\interrupt.o
+MEInit                          .text_vle	.text_vle	  C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\init.o
+                                                                * C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\me.o
+PITCHANNEL0                     .text_vle	.text_vle	* C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\main.o
+PITCHANNEL1                     .text_vle	.text_vle	* C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\main.o
+PIT_ChannelInit                 .text_vle	.text_vle	* C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\pit.o
+PIT_ConfigureTimer              .text_vle	.text_vle	* C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\pit.o
+                                                                  C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\main.o
+PIT_Init                        .text_vle	.text_vle	  C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\init.o
+                                                                * C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\pit.o
+PIT_StartTimer                  .text_vle	.text_vle	* C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\pit.o
+                                                                  C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\main.o
+PIT_StopTimer                   .text_vle	.text_vle	* C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\pit.o
+ResetConfigWord                 .rcw    	.rcw    	* C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\bam_init.o
+SIU_Init                        .text_vle	.text_vle	  C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\init.o
+                                                                * C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\siu.o
+_SDA2_BASE_                     [absolute]	        	  C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\crt0.o
+                                                                * C:\WINDRI~1\diab\570~1.0\PPCVLEE\simple\libc.a
+_SDA_BASE_                      .sdata  	.sdata  	  C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\crt0.o
+                                                                * C:\WINDRI~1\diab\570~1.0\PPCVLEE\simple\libc.a
+__BSS_END                       [absolute]	        	  C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\romcopy.o
+                                                                * .\src\default560P.dld
+__BSS_START                     [absolute]	        	  C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\romcopy.o
+                                                                * .\src\default560P.dld
+__DATA_END                      [absolute]	        	  C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\romcopy.o
+                                                                * .\src\default560P.dld
+__DATA_RAM                      [absolute]	        	  C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\romcopy.o
+                                                                * .\src\default560P.dld
+__DATA_ROM                      [absolute]	        	  C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\romcopy.o
+                                                                * .\src\default560P.dld
+__HEAP_END                      [absolute]	        	* .\src\default560P.dld
+__HEAP_START                    [absolute]	        	* .\src\default560P.dld
+__SP_END                        [absolute]	        	* .\src\default560P.dld
+__SP_INIT                       [absolute]	        	  C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\crt0.o
+                                                                * .\src\default560P.dld
+___BSS_END                      [absolute]	        	* .\src\default560P.dld
+___BSS_START                    [absolute]	        	* .\src\default560P.dld
+___DATA_END                     [absolute]	        	* .\src\default560P.dld
+___DATA_RAM                     [absolute]	        	* .\src\default560P.dld
+___DATA_ROM                     [absolute]	        	* .\src\default560P.dld
+___HEAP_END                     [absolute]	        	* .\src\default560P.dld
+___HEAP_START                   [absolute]	        	* .\src\default560P.dld
+___SP_END                       [absolute]	        	* .\src\default560P.dld
+___SP_INIT                      [absolute]	        	* .\src\default560P.dld
+__argv                          [absolute]	        	* .\src\default560P.dld
+__env                           [absolute]	        	* .\src\default560P.dld
+_reset                          .rcw    	.rcw    	* C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\bam_init.o
+_start                          .text_vle	.text_vle	* C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\crt0.o
+                                                                  C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\bam_init.o
+deltaSpeed                      .sdata  	.sdata  	* C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\main.o
+main                            .text_vle	.text_vle	* C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\main.o
+                                                                  C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\romcopy.o
+romcopy                         .text_vle	.text_vle	  C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\crt0.o
+                                                                * C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\romcopy.o
+speed                           .sdata  	.sdata  	* C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\main.o
+up                              .sdata  	.sdata  	* C:\Users\murv\Desktop\unit2\TASK2\subtask3\Template\output\main.o
