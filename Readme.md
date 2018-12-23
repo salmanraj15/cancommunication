@@ -3,6 +3,7 @@
 This is a project done in Automotive Software Engineering practical classes used to show CAN bus comminication which exchanges data such as vehicle speed, light control, door lock control etc.
 
 Task 4 is an AUTOSAR application task done using DSpace System Desk 4. This task is to create AUTOSAR Architecture with 2 components AutoLight Adapter and Exterior light manager.
+
 AutoLight Adapter has 3 inputs: 
 - Switch on Auto
 - Switch on LowBeam
