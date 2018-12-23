@@ -7,6 +7,7 @@ AutoLight Adapter has 3 inputs:
 - Switch on Auto
 - Switch on LowBeam
 - Light intensity Sensor
+
 2 outputs: 
 - Low beam
 - Day time running lights
@@ -14,6 +15,7 @@ AutoLight Adapter has 3 inputs:
 Exterior light manager has 3 inputs:
 - The outputs of Autolight Adapter are the first two inputs to exterior light manager.
 - Another input is left unconnected (To check if car is switched on)
+
 3 outputs of Exterior light manager:
 - Activate Low beam
 - Activate Low beam indicator
